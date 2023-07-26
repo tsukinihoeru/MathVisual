@@ -1,0 +1,4 @@
+Adding multiple functions to taylor visual -> some html element that toggles a variable:
+let func = 0; 0 = sin, 1 = cos, 2 = tan, 3 = e^x
+when we build the points for the graph in fillTaylor, we call different calc functions depending on which func is selected
+some arrays have to be two dimensional etc...

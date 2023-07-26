@@ -1,0 +1,95 @@
+.approxfn {
+    color:  #BB86FC;
+}
+
+.actualfn {
+    color: #03DAC6;
+}
+
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+input[type=radio]:checked+label {
+    color: #FFFFFF;
+    background:#03DAC6DE;
+}
+
+.rlabel {
+    color: #FFFFFFDE;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+label + input[type=radio] + label {
+   border-left: solid 3px #03DAC6DE;
+}
+
+.radiohead{
+    border: solid 3px #03DAC6DE;
+    display: inline-block;
+    margin: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+datalist {
+    color: #BB86FCDE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    writing-mode: horizontal-tb;
+    width: 200px;
+}
+
+
+input[type="range"] {
+    width: 200px;
+    margin: 0px;
+    accent-color: #BB86FCDE;
+}
+
+.orderSlide{
+    margin: 20px;
+    margin-left: 100px;
+}
+
+.tgrid{
+    display: grid;
+    grid-template-columns: 2.0fr .1fr 2.2fr;
+    grid-template-rows: 160px 160px;
+    background-color: #FFFFFF14;
+    border-radius: 15px;
+}
+
+.taylorBox{
+    border-radius: 20px;
+    margin: 20px;
+    border: hidden;
+    background-color:#bb86fc36
+
+}
+
+.afnBox{
+    border-radius: 20px;
+    margin: 20px;
+    border: hidden;
+    background-color:#03DAC636;
+}
+
+.uiBox{
+    border-radius: 20px;
+    margin: 20px;
+    border: hidden;
+    background-color:#ffffff1F;
+}
+
+.bumpLeft{
+    margin-left: 20px;
+}
+
+.bumpLeftMore{
+    margin-left: 50px;
+}

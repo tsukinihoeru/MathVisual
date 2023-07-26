@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/taylorStyle.css">
+    <title>Taylor Series</title>
+    <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
+    <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <h1>Interactive Visual of the Taylor Series</h1>
+    <div style="border-radius:15px; margin-top :20px; width : 850px">
+        <p style="margin : 20px;">The Taylor Series is an important mathematical tool that approximates functions with a polynomial given by the derivatives of a function. 
+            The more terms in the used in the polynomial, the more accurate the approximation. 
+            Explore the demonstration below to see the Taylor Series of various functions.</p>
+    </div>
+    <div>
+        <canvas id="taylor" width="960" height="480"></canvas>
+    </div>
+    <div class="tgrid">
+        <div class="uiBox">
+            <h2 style="text-align: center;">Drag to change the # of terms:</h2>
+            <div class="orderSlide">
+                <input type="range" id="order" name="order" list="values" min="1" max="6" value="3" step="1">
+                <datalist id="values">
+                    <option value="1" label="1"></option>
+                    <option value="2" label="2"></option>
+                    <option value="3" label="3"></option>
+                    <option value="4" label="4"></option>
+                    <option value="5" label="5"></option>
+                    <option value="6" label="6"></option>
+                </datalist>
+            </div>
+        </div>
+        <div></div>
+        <div class="taylorBox">
+            <h2 class="bumpLeft">Taylor Series Expansion:</h2>
+            <h2 class="bumpLeftMore"><la-tex id="expansionText" class="approxfn">f(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}</la-tex></h2>
+        </div>
+        <div class="uiBox" style="text-align: center;">
+            <h2>Change the function shown:</h2>
+            <form>
+                <div class="radiohead">
+                    <input type="radio" id="radioSin" name="selector" checked="checked" onclick="checkRadio(0)"><label
+                        class="rlabel" for="radioSin">Sin</label><input type="radio" id="radioCos" name="selector"
+                        onclick="checkRadio(1)"><label class="rlabel" for="radioCos">Cos</label><input type="radio"
+                        id="radioTan" name="selector" onclick="checkRadio(2)"><label class="rlabel"
+                        for="radioTan">ArcTan</label><input type="radio" id="radioExp" name="selector"
+                        onclick="checkRadio(3)"><label class="rlabel" for="radioExp">Exp</label>
+                </div>
+            </form>
+        </div>
+        <div></div>
+        <div class="afnBox">
+            <h2 class="bumpLeft">Actual Function:</h2>
+            <h2 class="bumpLeftMore"><la-tex id="afuncText" class="actualfn">g(x)=sin(x)</la-tex></h2>
+        </div>
+
+    </div>
+
+
+    <script src="script/taylorVisual.js"></script>
+</body>
+
+</html>
